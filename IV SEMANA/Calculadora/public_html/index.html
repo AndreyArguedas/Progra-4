@@ -9,24 +9,46 @@ and open the template in the editor.
         <title>Calculadora</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div id="calculator" align="center">
-            <table border="1" id="mainTable">
+        <div id="calculator">
+            <table id="mainTable">
                 <tr id="firstRow">
-                    <td>Calculadora</td>
-                    <td> - </td>
-                    <td> cuadro </td>
-                    <td> X </td>
+                    <td colspan="4" id="title">Calculadora</td>
+                    <td id="min">-</td>
+                    <td id="max">[]</td>
+                    <td id="close">X</td>
                 </tr>
                 <tr id="secondRow">
-                    <td colspan="3" id="view"></td>
-                    
+                    <td colspan="7" id="view"></td>                    
                 </tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
+                <tr class="keys">
+                    <td id="num7">7</td>
+                    <td id="num8">8</td>
+                    <td id="num9" colspan="2">9</td>
+                    <td id="clear">C</td>
+                    <td id="clearAll" colspan="2">CE</td>
+                </tr>
+                <tr class="keys">
+                    <td id="num4">4</td>
+                    <td id="num5">5</td>
+                    <td id="num6" colspan="2">6</td>
+                    <td id="divide">/</td>
+                    <td id="minus" colspan="2">-</td>
+                </tr>
+                <tr>
+                    <td id="num1">1</td>
+                    <td id="num2">2</td>
+                    <td id="num3" colspan="2">3</td>
+                    <td id="by">*</td>
+                    <td id="add" colspan="2">+</td>
+                </tr>
+                <tr>
+                    <td id="num0" colspan="2">0</td>
+                    <td id="dot">•</td>
+                    <td id="equal" colspan="4"> = </td>
+                </tr>
             </table>
             
         </div>
