@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Practica Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="index.html" method="get" onsubmit="return false"><!--POST Y GET--><!--CON EL FALSE SE DETIENE-->
+            <h1>Tipo de campos</h1>
+            Tipo texto:
+            <input type="text" name="nombre" value="ejemplo" id='txtNombre'/><br><br><br>
+            Tipo CheckBox:
+            <input type="checkbox" name="aceptar" id='aceptoCheck'/>Aceptar<br><br><br>
+            Tipo radio Boton:
+            <input type="radio" name="sexo"  value="masculino" id='RBMasc'/>M
+            <input type="radio" name="sexo"  value="femenino" id='RBFem'/>F<br><br><br>
+            <!--Como se llaman igual solo permite seleccionar uno-->
+            Tipo Seleccion:
+            <select>
+                <option value="CR">Costa Rica</option>  
+                <option value ="US">Estados Unidos</option>
+            </select><br><br><br>
+            Tipo Area:
+            <br><br>
+            <textarea name="Comentarios" cols="30" rows="30"></textarea><br><br><br>
+            Tipo Botones:
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Clear">
+            <input type="hidden" value="Oculto">
+        </form>
+    </body>
+</html>

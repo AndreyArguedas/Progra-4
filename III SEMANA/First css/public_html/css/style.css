@@ -1,0 +1,61 @@
+/*Comentarios */
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color:#70a78f;
+}
+
+p{
+    color:#fff;
+    text-decoration-line: underline;
+    font-size:16;
+    font-weight:bold;
+    font-family:Arial;
+}
+
+p:hover{
+    font-size: 50px;
+    color: #ffad47
+}
+
+/* CLASES*/
+
+.textTamano20{
+    font-size: 100px;
+}
+
+.textColorNegro{
+    color: #000;
+}
+
+/*Identificadores */
+
+#encabezado{
+    font-family: "Arial";
+    font-size:60px;
+    color: #ffad47
+}
+
+/*Estilos en contexto*/
+
+li p{
+    color: #01DF3A;
+    font-size:45px;
+}
+
+/* a y b que estan dentro de p que a la vez el id es encabezado*/
+
+#encabezado p a b{
+    color:#01DF3A;
+    font-size:10px;
+}
+
+#encabezado p,h1 span{
+    /*Se aplica a los p y a los h1 con span */
+    color:#01DF3A;
+    font-size:100px;
+}

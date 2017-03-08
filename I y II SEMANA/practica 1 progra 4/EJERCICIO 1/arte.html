@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ARTE</title>
+</head>
+<body>
+
+	<div id="contenedor" style="width:900px;
+								margin-right:auto;
+								margin-left:auto;
+								background-color:#fff;
+								color:#000;">
+	<form>
+		<p><b>Introduce los terminos de busqueda:</b></p><br>
+            <table cellspacing="8" cellpadding="8">
+            <tr>
+                <td align="center">OBRA</td>
+                <td align="center">TIPO</td>
+                <td align="center">DISPONIBILIDAD</td>
+                <td align="center">ESTILO</td>
+            </tr>
+            <tr>
+                <td>TITULO<input type="text" name="titulo" value="" id='txtTitulo'/> </td>
+                <td><input type="checkbox" name="tipo" value="esc" align="right" id='esculturaCheck'/>ESCULTURA</td>
+                <td><input type="radio" name="disp" id='museoRadio'/>MUSEO/Acceso publico</td>
+                <td rowspan="3">
+                	<select>
+                		<option value="clas">Clasico</option>
+                		<option value="abs">Abstarcto</option>  
+                		<option value ="surr">Surrealista</option>
+                		<option value ="otro">Otros</option>
+                	</select>
+                </td>
+            </tr>
+
+             <tr>
+                <td rowspan="2">AUTOR<input type="text" name="autor" value="" id='txtAutor'/> </td>
+                <td><input type="checkbox" name="tipo" align="right" value="arq" id='arquitecturaCheck'/>Arquitectura</td>
+                <td rowspan="2"><input type="radio" valign="top" name="disp" id='museoRadio'/>Coleccion privada</td>
+            </tr>
+
+             <tr>
+                <td><input type="checkbox" name="tipo" value="pint" align="right" id='pinturaCheck'/>Pintura</td>
+            </tr>
+
+        </table>
+
+        <table cellspacing="24" cellpadding="24">
+        	<tr>
+        		<td><p><b>Haganos saber sus sugerencias</b></p></td>
+        		<td valign="bottom"><textarea name="Sugerencias" cols="20" rows="4">Me gustaria indicar que..</textarea></td>
+        	</tr>
+
+        	<tr>
+        		<td colspan="2" align="center"><input type="submit" value="Enviar"></td>
+        	</tr>
+
+        </table>
+
+    </form>
+	</div>
+</body>
+</html>
