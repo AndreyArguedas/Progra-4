@@ -5,9 +5,6 @@
  */
 
 var dots = 0;
-var v1 = 0;
-var v2 = 0;
-var operation = "";
 
 function keyClicked(v){
     if(typeof v === "number")
@@ -31,18 +28,28 @@ function makeAction(v){
         break;
         case "+":
             document.getElementById("view").innerHTML += "+";
+            if(dots > 0)
+                dots--;
         break;
         case "-":
             document.getElementById("view").innerHTML += "-";
+            if(dots > 0)
+                dots--;
         break;
         case "/":
             document.getElementById("view").innerHTML += "/";
+            if(dots > 0)
+                dots--;
         break;
         case "*":
             document.getElementById("view").innerHTML += "*";
+            if(dots > 0)
+                dots--;
         break;
         case "=":
             evaluate();
+        break;
+    default:
         break;
     }
         
@@ -66,10 +73,15 @@ function controlDot(){
 }
 
 function evaluate(){
-    var r = eval(document.getElementById("view").innerHTML);
-    document.getElementById("view").innerHTML = r;
-    if(dots > 0)
-        dots--;
+    try{
+        var r = eval(document.getElementById("view").innerHTML);
+        document.getElementById("view").innerHTML = r;
+        if (dots > 0)
+            dots--;
+    }catch(e){
+        alert("Invalid math expression");
+        clear();
+    }
 }
 
 
