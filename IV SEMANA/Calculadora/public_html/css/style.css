@@ -5,25 +5,42 @@
 
 
 #calculator{  
-   
+
 }
 
 #mainTable{
     text-align:center;
-    border:0px;
+    border:1px solid black;
 }
 
 #mainTable td{
     height:45px;
     width:30px;
+    border:1px solid black;
 }
 
 #firstRow{
     background:#2e5896;
+    color:#ffffff;
+    font-size:22px;
+    font-family:Arial;
 }
 
-#firstRow #title{
-    font-size:18px;
+#close{
+    background:#e6291c;
+}
+
+#view{
+    background:#fcf9f9;
+    font-size:22px;
     font-family:Arial;
-    color:#ffffff;
+    text-align:right;
+}
+
+.keys td{
+    background:#faf5fa;
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(23,3,89,1);
+    -moz-box-shadow: 0px 0px 1px 1px rgba(23,3,89,1);
+    box-shadow: 0px 0px 1px 1px rgba(23,3,89,1);
+    cursor:pointer;
 }

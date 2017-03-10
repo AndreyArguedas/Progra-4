@@ -10,6 +10,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <script src="js/calculator.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="calculator">
@@ -24,33 +25,32 @@ and open the template in the editor.
                     <td colspan="7" id="view"></td>                    
                 </tr>
                 <tr class="keys">
-                    <td id="num7">7</td>
-                    <td id="num8">8</td>
-                    <td id="num9" colspan="2">9</td>
-                    <td id="clear">C</td>
-                    <td id="clearAll" colspan="2">CE</td>
+                    <td id="num7" onclick="keyClicked(7);">7</td>
+                    <td id="num8" onclick="keyClicked(8);">8</td>
+                    <td id="num9" onclick="keyClicked(9);" colspan="2">9</td>
+                    <td id="clear" onclick="keyClicked('C');">C</td>
+                    <td id="clearAll" onclick="keyClicked('C');" colspan="2">CE</td>
                 </tr>
                 <tr class="keys">
-                    <td id="num4">4</td>
-                    <td id="num5">5</td>
-                    <td id="num6" colspan="2">6</td>
-                    <td id="divide">/</td>
-                    <td id="minus" colspan="2">-</td>
+                    <td id="num4" onclick="keyClicked(4);">4</td>
+                    <td id="num5" onclick="keyClicked(5);">5</td>
+                    <td id="num6" onclick="keyClicked(6);" colspan="2">6</td>
+                    <td id="divide" onclick="keyClicked('/');">/</td>
+                    <td id="minus" onclick="keyClicked('-');" colspan="2">-</td>
                 </tr>
-                <tr>
-                    <td id="num1">1</td>
-                    <td id="num2">2</td>
-                    <td id="num3" colspan="2">3</td>
-                    <td id="by">*</td>
-                    <td id="add" colspan="2">+</td>
+                <tr class="keys">
+                    <td id="num1" onclick="keyClicked(1);">1</td>
+                    <td id="num2" onclick="keyClicked(2);">2</td>
+                    <td id="num3" onclick="keyClicked(3);" colspan="2">3</td>
+                    <td id="by" onclick="keyClicked('*');">*</td>
+                    <td id="add" onclick="keyClicked('+');" colspan="2">+</td>
                 </tr>
-                <tr>
-                    <td id="num0" colspan="2">0</td>
-                    <td id="dot">•</td>
-                    <td id="equal" colspan="4"> = </td>
+                <tr class="keys">
+                    <td id="num0" onclick="keyClicked(0);" colspan="2">0</td>
+                    <td id="dot" onclick="keyClicked('•');">•</td>
+                    <td id="equal" onclick="keyClicked('=');" colspan="4"> = </td>
                 </tr>
-            </table>
-            
+            </table>            
         </div>
     </body>
 </html>
