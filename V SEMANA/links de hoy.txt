@@ -1,0 +1,17 @@
+http://realdesigncr.com/desarrollo/PrograIVLeccion10/public_html/files/empleados.json
+
+http://www.httputility.net/json-minifier.aspx
+
+http://www.json.org/json-es.html
+
+http://jqueryui.com/demos/
+
+https://www.w3schools.com/jquery/
+
+http://api.jquery.com/
+
+https://www.w3schools.com/bootstrap/
+
+http://librosweb.es/libro/bootstrap_3/
+
+http://getbootstrap.com/
