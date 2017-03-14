@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"/>
+
+        
+        
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+		$("#esconder").click(function(){
+                    $("button").hide();
+                });
+                
+                $("#mostrar").click(function(){
+                    $("button").show();
+                });
+                
+                $("#add").click(function(){
+                    $( "li" ).append("<b> Esto es una prueba</b>");
+                });
+            });
+        </script>
+        
+        
+        
+    </head>
+    <body>
+        
+        <button type="button" class="btn btn-default" id="prueba">Default</button>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <p id="esconder">ESCONDER</p>
+        <p id="mostrar">MOSTRAR</p>
+        <p id="add">ADD</p>
+        
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+        </ul>
+        <p>a paragraph</p>
+        
+        
+        
+    </body>
+</html>
