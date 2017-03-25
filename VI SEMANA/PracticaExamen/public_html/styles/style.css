@@ -51,45 +51,67 @@ img{
     margin-left: 175px;
 }
 
-#centerLineBottom{
+#centerLineUp{
     width:0px;
-    height:170px;
+    height:120px;
     border-radius: -10px -10px -10px -10px;
     -moz-border-radius: -10px -10px -10px -10px;
     -webkit-border-radius: -10px -10px -10px -10px;
     border: 4px solid white;
-    margin-left: 470px;
+    margin-left: 440px;
+    margin-top:-290px;
 }
 
 #mainCircle{
-    width:200px;
-    height:200px;
+    width:150px;
+    height:150px;
     border-radius: 200px 200px 200px 200px;
     -moz-border-radius: 200px 200px 200px 200px;
     -webkit-border-radius: 200px 200px 200px 200px;
-    border: 10px solid black;
-    margin-left: 470px;
+    border: 10px solid white;
+    margin-left: 370px;
 }
 
+#centerLineDown{
+    width:0px;
+    height:118px;
+    border-radius: -10px -10px -10px -10px;
+    -moz-border-radius: -10px -10px -10px -10px;
+    -webkit-border-radius: -10px -10px -10px -10px;
+    border: 4px solid white;
+    margin-left: 440px;
+    margin-top:0px;
+}
 
-/*#goal2{
+#halfcircle2{
+    width:100px;
+    height:200px;
+    border-radius: 0px 100px 100px 0px;
+    -moz-border-radius: 0px 100px 100px 0px;
+    -webkit-border-radius: 100px 0px 0px 100px;
+    border: 6px solid white;
+    margin-top: -280px;
+    margin-left: 605px;
+}
+
+#goal2{
     width:200px;
     height:300px;
     border-radius: 0px 0px 0px 0px;
     -moz-border-radius: 0px 0px 0px 0px;
     -webkit-border-radius: 0px 0px 0px 0px;
     border: 6px solid white;
-    margin-top: -70px;
-    margin-right: 1150px;
+    margin-top: -260px;
+    margin-left: 700px;
 }
 
-#halfcircle2{
-    width:100px;
-    height:200px;
-    border-radius: 0px 0px 0px 0px;
-    -moz-border-radius: 0px 0px 0px 0px;
-    -webkit-border-radius: 0px 100px 100px 0px;
-    border: 6px solid white;
-    margin-top: 250px;
-    margin-left: 175px;
-}*/
+ul{
+    width:130px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#accion{
+    margin-right:auto;
+    margin-left:auto;
+}

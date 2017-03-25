@@ -1,0 +1,48 @@
+body {
+	background: white;
+}
+
+.etiqueta {
+	background-color: #ea6153;
+	color: #ffffff;
+}
+
+.titulo{
+	font-weight: bold;
+	text-align:center;
+	background-color: #ea6153;
+	color: #ffffff;
+}
+
+.boton{
+	border: 2px solid lightgray;
+    border-radius: 10px;
+}
+
+#tdMasc {
+	width: 20px; height:20px;
+	background-image:url(../images/male.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#tdFem {
+	width: 20px; height:20px;
+	background-image:url(../images/female.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+input[type="text"].focus {background-color:pink;}
+input[type="text"].nofocus {background-color:white;}
+
+input.invalid {box-shadow: 0 0 5px 1px red;}
+
+table.grid{border:1px solid black; border-collapse: collapse;}
+table.grid thead tr {border:1px solid black; background-color: #ea6153; color: #ffffff; }
+table.grid thead tr th{border:inherit;}
+table.grid tbody tr{border:1px solid black; background: #99ff99;}
+table.grid tbody tr:nth-child(odd) {background: #ffece6;}
+table.grid tbody tr:nth-child(even) {background: #ffb399;}
+table.grid tbody tr:hover {background: #ff794d;}
+table.grid tbody tr td{border:inherit;}
