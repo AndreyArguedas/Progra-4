@@ -111,7 +111,14 @@ ul{
     margin-right:auto;
 }
 
-#accion{
-    margin-right:auto;
-    margin-left:auto;
+#acciones{
+    text-align:center;
+}
+
+#rowc2{
+    text-align:center;
+}
+
+#rowc{
+    text-align:center;
 }
