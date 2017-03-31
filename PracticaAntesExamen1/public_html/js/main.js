@@ -129,13 +129,14 @@ function addListener(element, estudiante, i, p) {
             estudiante.nota3 = parseInt(e.target.value);
             p.innerText = estudiante.promedio();
         }
+        Storage.store("estudiantes",estudiantes);
     });
     
 }
 
 function find(v){
     for(var i = 0; i < estudiantes.length; i++)
-        if(v === estudiantes[i].cedula)
+        if(v === estudiantes[i].carnet)
             return true;
     return false;
 }

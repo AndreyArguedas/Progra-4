@@ -22,4 +22,3 @@ Estudiante.prototype={
   completo: function (sep) { return this.carnet +  sep + this.nombre + sep + this.apellidos; }
 };
 
-
