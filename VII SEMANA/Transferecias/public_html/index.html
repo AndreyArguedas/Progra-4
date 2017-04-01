@@ -1,0 +1,100 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Transaciones</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+       
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="js/Cuenta.js" type="text/javascript"></script>
+        <script src="js/Empleado.js" type="text/javascript"></script>
+        <script src="js/Storage.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="container">
+                    <h2>AGREGAR EMPLEADO</h2>
+                </div>
+                <br>
+                <form method="POST" id="formEmpleado" action="javascript:doSubmit();">
+                    <div class="form-group">
+                        <label for="cedula">Cedula</label>
+                        <input type="text" class="form-control" id="cedula" name="cedula" placeholder="9-9999-9999"/>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Your name"/>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="SUBMIT">
+                </form>
+                <br>
+                <table class="table table-hover" id="tablaEmpleado">
+                    <thead>
+                        <tr>
+                            <th>CEDULA</th>
+                            <th>NOMBRE</th>
+                        </tr>
+                    </thead>
+                    <tbody id="empleadoBody"></tbody>
+                </table>
+
+            </div>
+            <div class="col-sm-6">
+                <div class="container">
+                    <h2>AGREGAR CUENTA</h2>
+                </div>
+                <br>
+                <form method="POST" id="formCuenta" action="javascript:doSubmitCuenta();">
+                    <div class="form-group">
+                        <label for="cedula">Cuenta</label>
+                        <input type="text" class="form-control" id="numCuenta" name="numCuenta" placeholder="999"/>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="nombre">Asignar a empleado</label>
+                        <select id="mainSelector" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <!--<option value="clas">Clasico</option>-->
+                            
+                        </select>
+                    </div><br>
+                    <input type="submit" class="btn btn-primary" value="SUBMIT">
+                </form>
+                <table class="table table-hover" id="tablaCuenta">
+                    <thead>
+                        <tr>
+                            <th>NUMERO</th>
+                            <th>EMPLEADO</th>
+                            <th>SALDO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuentaBody"></tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="container" id="formTransferencias">
+            <div class="row">
+                <form method="POST" id="trans" >
+                    <div class="form-group" >
+                        <input type="text"  id="monto" name="monto" placeholder="$"/>
+                        <input type="submit" class="btn btn-primary" value="Depositar">
+                    </div>
+                </form>
+            </div>
+        </div>        
+    </body>
+</html>
