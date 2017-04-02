@@ -1,0 +1,37 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+tr{
+    cursor:pointer;
+}
+
+.Baja{
+    background-color:#2b542c;
+}
+
+.Media{
+    background-color:#265a88;
+}
+
+.Alta{
+    background-color:#f5e79e;
+}
+
+.Urgente{
+    background-color:#c9302c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
