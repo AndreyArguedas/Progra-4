@@ -5,6 +5,7 @@
 var empleado;
 var empleados;
 var cuenta;
+var personaSelect;
 
 $(document).ready(function(){
     var $form = $("#formEmpleado");
@@ -65,7 +66,7 @@ function listEmpleado(empleado){
     td =document.createElement("td");
     td.appendChild(document.createTextNode(empleado.nombre));
     tr.appendChild(td);
-   
+    tr.addEventListener("click", (e) => selectEmpleado(empleado));
     $("#empleadoBody").append(tr);
     var o = document.createElement("option");
     o.appendChild(document.createTextNode(empleado.cedula));
@@ -73,6 +74,26 @@ function listEmpleado(empleado){
     $("#mainSelector").append(o);
 }
 
+function selectEmpleado(empleado){
+    personaSelect = empleado;
+    $("#cuentaBody").html("");
+    var c = empleado.cuentas;
+    for(var i = 0; i < c.length; i++){
+            var tr = document.createElement("tr");
+            var td;
+            td = document.createElement("td");
+            td.appendChild(document.createTextNode(c[i].numero));
+            tr.appendChild(td);
+            td = document.createElement("td");
+            td.appendChild(document.createTextNode(empleado.cedula));
+            tr.appendChild(td);
+            td = document.createElement("td");
+            td.appendChild(document.createTextNode(c[i].saldo));
+            tr.appendChild(td);
+            
+            $("#cuentaBody").append(tr);
+    }
+}
 function doSubmit(){
     var $cedula = $("#cedula");
     var $nombre = $("#nombre");
@@ -103,15 +124,18 @@ function doSubmitCuenta(){
                 empleados[i].cuentas.push(cuenta);
             }
         }
+        Storage.store("empleados", empleados);
         window.alert("Data sent: " + cuenta.numero);
         var $formulario = $('#formCuenta');
         $formulario[0].reset();
+        listCuentas();
         	
     }
     else
         alert("No se puede ingresar esta cuenta ya existe");
 }
 function listCuentas(){
+    $("#cuentaBody").html("");
     for(var e = 0; e < empleados.length; e++){
         var cuentas = empleados[e].cuentas;
         for(var i = 0; i < cuentas.length; i++){
@@ -121,12 +145,26 @@ function listCuentas(){
             td.appendChild(document.createTextNode(cuentas[i].numero));
             tr.appendChild(td);
             td = document.createElement("td");
-            td.appendChild(document.createTextNode(empleados[e].nombre));
+            td.appendChild(document.createTextNode(empleados[e].cedula));
             tr.appendChild(td);
-
+            td = document.createElement("td");
+            td.appendChild(document.createTextNode(cuentas[i].saldo));
+            tr.appendChild(td);
             $("#cuentaBody").append(tr);
         }
     }
+}
+
+function transferir(){
+    if(personaSelect !== undefined && $("#monto").val().length > 0){
+        var c = personaSelect.cuentas;
+        for(var i = 0; i < c.length; i++)
+            c[i].saldo += parseInt($("#monto").val());
+        Storage.store("empleados", empleados);
+        listCuentas();
+    }
+    else
+        alert("Selecione una persona para depositar el saldo")
 }
 
 function findEmpleado(v){
