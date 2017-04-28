@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 15, 2016 9:11:43 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cr.ac.una.prograiv.agenda.domain.Telefonos" table="Telefonos" catalog="mydb" optimistic-lock="version">
+        <id name="pkTelefono" type="int">
+            <column name="PK_telefono" />
+            <generator class="assigned" />
+        </id>
+        <property name="pkFkCedula" type="int">
+            <column name="PK_FK_cedula" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="50" />
+        </property>
+        <property name="ultUsuario" type="string">
+            <column name="ultUsuario" length="20" />
+        </property>
+        <property name="ultModificacion" type="date">
+            <column name="ultModificacion" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

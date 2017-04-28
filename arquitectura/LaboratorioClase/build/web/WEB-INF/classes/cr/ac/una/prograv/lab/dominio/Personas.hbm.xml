@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-abr-2017 18:54:00 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cr.ac.una.prograv.lab.dominio.Personas" table="personas" catalog="mydb" optimistic-lock="version">
+        <id name="pkCedula" type="int">
+            <column name="PK_cedula" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" not-null="true" />
+        </property>
+        <property name="apellido1" type="string">
+            <column name="apellido1" length="30" not-null="true" />
+        </property>
+        <property name="apellido2" type="string">
+            <column name="apellido2" length="30" />
+        </property>
+        <property name="fecNacimiento" type="date">
+            <column name="fecNacimiento" length="10" not-null="true" />
+        </property>
+        <property name="sexo" type="java.lang.Integer">
+            <column name="sexo" />
+        </property>
+        <property name="observaciones" type="string">
+            <column name="observaciones" length="400" />
+        </property>
+        <property name="ultUsuario" type="string">
+            <column name="ultUsuario" length="20" />
+        </property>
+        <property name="ultModificacion" type="date">
+            <column name="ultModificacion" length="10" />
+        </property>
+        <bag name="direccioneses" table="direcciones" inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="FK_cedula" not-null="true" />
+            </key>
+            <one-to-many class="cr.ac.una.prograv.lab.dominio.Direcciones" />
+        </bag>
+        <bag name="telefonoses" table="telefonos" inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="PK_FK_cedula" not-null="true" />
+            </key>
+            <one-to-many class="cr.ac.una.prograv.lab.dominio.Telefonos" />
+        </bag>
+    </class>
+</hibernate-mapping>

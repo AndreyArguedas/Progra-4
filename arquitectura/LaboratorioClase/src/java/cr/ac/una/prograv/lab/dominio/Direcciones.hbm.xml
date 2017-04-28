@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-abr-2017 18:54:00 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cr.ac.una.prograv.lab.dominio.Direcciones" table="direcciones" catalog="mydb" optimistic-lock="version">
+        <id name="pkIdDireccion" type="java.lang.Integer">
+            <column name="PK_idDireccion" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="personas" class="cr.ac.una.prograv.lab.dominio.Personas" fetch="select">
+            <column name="FK_cedula" not-null="true" />
+        </many-to-one>
+        <property name="nomLugar" type="string">
+            <column name="nomLugar" length="40" not-null="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="400" not-null="true" />
+        </property>
+        <property name="ultUsuario" type="string">
+            <column name="ultUsuario" length="20" />
+        </property>
+        <property name="ultModificacion" type="date">
+            <column name="ultModificacion" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>
