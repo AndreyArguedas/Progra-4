@@ -6,7 +6,7 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mydb</property>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password"></property>
+    <property name="hibernate.connection.password">solidmurder121</property>
     <mapping resource="cr/ac/una/prograiv/agenda/domain/Personas.hbm.xml"/>
     <mapping resource="cr/ac/una/prograiv/agenda/domain/Direcciones.hbm.xml"/>
     <mapping resource="cr/ac/una/prograiv/agenda/domain/Telefonos.hbm.xml"/>

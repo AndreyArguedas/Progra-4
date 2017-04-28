@@ -19,6 +19,8 @@ public class BaseBL {
     public BaseBL() {
         daos = new LinkedHashMap();
         daos.put("cr.ac.una.prograiv.agenda.domain.Personas", new PersonasDAO());
+        daos.put("cr.ac.una.prograiv.agenda.domain.Telefonos", new TelefonosDAO());
+        daos.put("cr.ac.una.prograiv.agenda.domain.Direcciones", new DireccionesDAO());
     }
     
     public IBaseDAO getDao(String className){
