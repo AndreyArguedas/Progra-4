@@ -161,9 +161,9 @@
                                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menú Principal
                                     <span class="caret"></span></button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Mantenimiento Personas</a></li>
-                                    <li><a href="#">Mantenimiento Teléfonos</a></li>
-                                    <li><a href="#">Mantenimiento Direcciones</a></li>
+                                    <li><a href="PersonasJSP.jsp">Mantenimiento Personas</a></li>
+                                    <li><a href="TelefonosJSP.jsp">Mantenimiento Teléfonos</a></li>
+                                    <li><a href="DireccionesJSP.jsp">Mantenimiento Direcciones</a></li>
                                     <li class="divider"></li>
                                     <li><a href="Logout">Cerrar Sesión</a></li>
                                 </ul>
