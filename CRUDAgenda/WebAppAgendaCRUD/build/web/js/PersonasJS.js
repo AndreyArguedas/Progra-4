@@ -30,6 +30,9 @@ $(function () {
         $("#myModalFormulario").modal("show");
     });
     
+    $("#btBuscarPersona").click(function () {
+        buscarPersonas();
+    });
     
 });
 
@@ -48,7 +51,7 @@ $(document).ready(function () {
 //******************************************************************************
 
 function consultarPersonas() {
-    mostrarModal("myModal", "Espere por favor..", "Consultando la información de personas en la base de datos");
+    //mostrarModal("myModal", "Espere por favor..", "Consultando la información de personas en la base de datos");
     //Se envia la información por ajax
     $.ajax({
         url: 'PersonasServlet',
@@ -63,6 +66,24 @@ function consultarPersonas() {
             // se oculta el modal esta funcion se encuentra en el utils.js
             ocultarModal("myModal");
 
+        },
+        type: 'POST',
+        dataType: "json"
+    });
+}
+
+function buscarPersonas(){ //para buscar 
+    $.ajax({
+        url: 'PersonasServlet',
+        data:{
+            accion: "buscarPersonas",
+            cedula: $("#buscarCedula").val()
+        },
+        error: function () { //si existe un error en la respuesta del ajax
+            alert("Se presento un error a la hora de cargar la información de las personas en la base de datos");
+        },
+        success: function (data) { //si todo esta correcto en la respuesta del ajax, la respuesta queda en el data
+            dibujarTabla(data);
         },
         type: 'POST',
         dataType: "json"

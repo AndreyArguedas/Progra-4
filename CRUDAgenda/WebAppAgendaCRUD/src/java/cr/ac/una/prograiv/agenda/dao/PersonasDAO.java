@@ -96,5 +96,16 @@ public class PersonasDAO extends HibernateUtil implements IBaseDAO<Personas, Int
         return listaPersonas;
     }
     
+     public List<Personas> findAllLike(int ced) {
+        List<Personas> listaPersonas;
+        try {
+            iniciaOperacion();//HQL
+            listaPersonas = getSesion().createQuery("from Personas where PK_cedula like '%%%"+ ced +"%%'").list();
+        } finally {
+            getSesion().close();
+        }
+
+        return listaPersonas;
+    }
     
 }

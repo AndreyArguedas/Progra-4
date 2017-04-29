@@ -80,6 +80,11 @@ public class PersonasServlet extends HttpServlet {
                     }
                     break;
                     
+                case "buscarPersonas": ////Hacer una busqueda con like
+                    json = new Gson().toJson(pBL.findAllLike(Integer.parseInt(request.getParameter("cedula"))));
+                    out.print(json);
+                    break;
+                    
                 case "consultarPersonasByID":
                     //se consulta la persona por ID
                     p = pBL.findById(Integer.parseInt(request.getParameter("idPersona")));
